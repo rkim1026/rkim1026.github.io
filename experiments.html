@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiments</title>
+</head>
+<body>
+
+    <h1>Experiments</h1>
+
+    <nav>
+        <ul>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Template</h2>
+        <p>The element below is a template. Its contents are parsed but not rendered by the browser.</p>
+        <template id="project-card-template">
+            <article>
+                <h3>Project Title</h3>
+                <p>Project description goes here.</p>
+            </article>
+        </template>
+    </section>
+
+    <section>
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="audio/intro.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <section>
+        <h2>Video</h2>
+        <video controls width="480">
+            <source src="video/postura_demo.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section>
+        <h2>Canvas</h2>
+        <canvas id="Canvas" width="200" height="100"></canvas>
+        <script>
+            const draw = document.getElementById('Canvas').getContext('2d');
+            draw.fillRect(20, 20, 80, 60);
+            draw.strokeRect(120, 20, 60, 60);
+        </script>
+    </section>
+
+</body>
+</html>

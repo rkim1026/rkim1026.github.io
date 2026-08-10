@@ -1,0 +1,156 @@
+:root {
+    --bg: #0a0a0a;
+    --text: #e0e0e8;
+    --muted: #a0b0c0;
+    --panel: #1a1a22;
+    --cyan: #00ccdd;
+    --lime: #88ff00;
+    --border: #3a4a5a;
+}
+
+[data-theme="light"] {
+    --bg: #f0f0f5;
+    --text: #0a0a0a;
+    --muted: #3a3a45;
+    --panel: #ffffff;
+    --cyan: #0066ff;
+    --lime: #008866;
+    --border: #a0c0e0;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        --bg: #f0f0f5;
+        --text: #0a0a0a;
+        --muted: #3a3a45;
+        --panel: #ffffff;
+        --cyan: #0066ff;
+        --lime: #008866;
+        --border: #a0c0e0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+}
+
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: var(--lime);
+    color: #000;
+    padding: 0.5rem;
+}
+
+header {
+    background: var(--panel);
+    border-bottom: 2px solid var(--cyan);
+    padding: 1rem;
+}
+
+#brand {
+    color: var(--cyan);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--cyan);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+h1 {
+    color: var(--cyan);
+}
+
+h2, h3 {
+    color: var(--cyan);
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.intro img {
+    width: 200px;
+    max-width: 100%;
+    border: 3px solid var(--cyan);
+    border-radius: 50%;
+}
+
+.panel,
+.theme-form fieldset {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.theme-form legend {
+    color: var(--lime);
+}
+
+.muted,
+footer {
+    color: var(--muted);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.noscript-note {
+    background: #880000;
+    color: #fff;
+    padding: 0.75rem;
+}
+
+@media (max-width: 500px) {
+    .intro {
+        flex-direction: column;
+    }
+}
