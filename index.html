@@ -10,7 +10,6 @@
     <script src="scripts/theme.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
 
     <noscript>
         <p class="noscript-note">
@@ -47,54 +46,62 @@
             </fieldset>
         </form>
 
-        <section id="profile" >
-            <img src="images/mepic2.png" alt="Photo of Richard Kim in a suit" width="220">
-            <article>
-                <h2>Profile</h2>
-                <p>22, San Diego · Software Engineer</p>
-            </article>
-        </section>
+        <section class="grid-container">
+            <section id="profile" >
+                <img src="images/mepic2.png" alt="Photo of Richard Kim in a suit" width="220">
+                <article>
+                    <p>22, San Diego · Software Engineer</p>
+                </article>
+            </section>
 
-        <section id="bio" >
-            <h2>Bio</h2>
-            <p>
-                I am a student at UC San Diego studying <b>Computer Engineering</b>.
-                I am interested in analog and digital circuit design, power electronics, and control theory.
-            </p>
-        </section>
+            <section id="bio-skills" >
+                
+                <p> <b>Bio:</b>
+                    I am a student at UC San Diego studying <b>Computer Engineering</b>.
+                    I am interested in analog and digital circuit design, power electronics, and control theory.
+                </p>
 
-        <section id="skills" >
-            <h2>Skills</h2>
+                <ul>
+                    <lh><b>Languages</b></lh>
+                    <li>Python</li>
+                    <li>C/C++</li>
+                    <li>MATLAB</li>
+                    <li>HTML/CSS/JavaScript</li>
+                    <li>SystemVerilog</li>
+                </ul>
 
-            <h3>Languages</h3>
-            <ul>
-                <li>Python</li>
-                <li>C/C++</li>
-                <li>MATLAB</li>
-                <li>HTML/CSS/JavaScript</li>
-                <li>SystemVerilog</li>
-            </ul>
+                <ul>
+                    <lh><b>Tools and Hardware</b></lh>
+                    <li>Oscilloscope</li>
+                    <li>Multimeter</li>
+                    <li>Function Generator</li>
+                    <li>Power Supply</li>
+                    <li>Arduino</li>
+                    <li>ESP32</li>
+                    <li>3D Printer</li>
+                </ul>
 
-            <h3>Tools and Hardware</h3>
-            <ul>
-                <li>Oscilloscope</li>
-                <li>Multimeter</li>
-                <li>Function Generator</li>
-                <li>Power Supply</li>
-                <li>Arduino</li>
-                <li>ESP32</li>
-                <li>3D Printer</li>
-            </ul>
+                <ul>
+                    <lh><b>Software</b></lh>
+                    <li>Fusion 360</li>
+                    <li>LTspice</li>
+                    <li>Cadence Virtuoso</li>
+                    <li>Git</li>
+                    <li>Unix</li>
+                    <li>Docker</li>
+                </ul>
+            </section>
 
-            <h3>Software</h3>
-            <ul>
-                <li>Fusion 360</li>
-                <li>LTspice</li>
-                <li>Cadence Virtuoso</li>
-                <li>Git</li>
-                <li>Unix</li>
-                <li>Docker</li>
-            </ul>
+            <section id="personality" >
+                <ul>
+                    <lh><b>Personality</b></lh>
+                    <li>Kind</li>
+                    <li>Resilient</li>
+                    <li>Detail-oriented</li>
+                    <li>Curious</li>
+                    <li>Creative</li>
+                </ul>
+            </section>
         </section>
 
         <section id="goal">
@@ -102,17 +109,10 @@
             <p>My goal is to become an electrical engineer and contribute to the development of innovative technologies.</p>
         </section>
 
-        <section id="personality" >
-            <h2>Personality</h2>
-            <ul>
-                <li>Kind</li>
-                <li>Resilient</li>
-                <li>Detail-oriented</li>
-                <li>Curious</li>
-                <li>Creative</li>
-            </ul>
-        </section>
+
     </main>
+
+    <hr>
 
     <footer>
         <p>&copy; 2026 Richard Kim. All rights reserved.</p>
