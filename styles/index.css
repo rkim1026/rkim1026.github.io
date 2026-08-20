@@ -1,27 +1,83 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-gap: 10px;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, 3fr);
+    gap: 1.5rem;
+    align-items: start;
 }
 
 .grid-container section {
-    font-size: 20px;
+    font-size: 1.125rem;
     text-align: center;
+}
+
+#profile img {
+    max-width: 100%;
+    height: auto;
 }
 
 #bio-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;          
-    padding-left: 0;   
+    gap: 1.5rem;
     justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+#bio-skills > p {
+    flex: 1 1 100%;
+    margin: 0;
+    text-align: left;
+}
+
+#bio-skills > ul {
+    flex: 1 1 10rem;
+    margin: 0;
+    padding-left: 1.25rem;
+    text-align: left;
 }
 
 nav > ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-left: 0;
+    margin: 0;
+
     li {
         padding: 5px;
     }
 }
 
+@media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .grid-container section {
+        font-size: 1rem;
+    }
+
+    #profile {
+        text-align: center;
+    }
+
+    #profile img {
+        width: min(220px, 70vw);
+    }
+
+    #bio-skills {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    #bio-skills > p,
+    #bio-skills > ul {
+        flex: none;
+        width: 100%;
+    }
+}
